@@ -11,11 +11,11 @@ class App extends Component {
       todoList: [],
       newInput: '',
     }
-  this.handleAdd = this.handleAdd.bind(this)
+  this.handleAdd = this.handleAdd.bind(this);
 
   }
   handleChange(value){
-    this.setState = this.handleChange({newInput: value})
+    this.setState({newInput: value})
   }
   handleAdd(){
     this.setState({todoList: [...this.state.todoList, this.state.newInput], newInput: ""})
@@ -28,7 +28,7 @@ class App extends Component {
         <h1>My To-Do List</h1>
         <div>
           <input
-          value={this.state.input}
+          value={this.state.newInput}
           placeholder='Enter New Task'
           onChange={e => this.handleChange(e.target.value)}
           />
